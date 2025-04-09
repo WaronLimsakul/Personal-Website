@@ -66,8 +66,7 @@ export default function Home() {
               Hi, I'm <span className="text-primary">Waron Limsakul</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              I'm a full-stack developer specializing in systems programming,
-              distributed systems, and back-end architecture.
+              Full-stack Developer | Life-long Learner
             </p>
             <div className="flex justify-center gap-4">
               <a href="#projects">
@@ -93,10 +92,12 @@ export default function Home() {
                   Who I Am
                 </h3>
                 <p className="text-muted-foreground mb-6 text-center">
-                  I'm a passionate full-stack developer with deep expertise in
-                  building robust, scalable systems and low-level software. I
-                  enjoy working close to the metal, optimizing performance, and
-                  solving complex architectural challenges.
+                  I'm a full-stack developer with a growing interest in back-end
+                  and low-level systems. I enjoy working on performance
+                  optimization, building scalable solutions, and tackling
+                  complex architectural challenges. I'm constantly learning and
+                  improving my skills to build more efficient and reliable
+                  systems.
                 </p>
                 <h3 className="text-2xl font-semibold mb-4 text-center">
                   My Skills
@@ -104,11 +105,11 @@ export default function Home() {
                 <div className="flex justify-center">
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      "Rust/C/C++",
-                      "Distributed Systems",
-                      "System Architecture",
+                      "HTML, CSS, JS, TS",
+                      "Go, basic C",
+                      "API integration, DBMS",
                       "Database Optimization",
-                      "Microservices",
+                      "Basic Networking",
                       "Linux/Unix Systems",
                     ].map((skill) => (
                       <div className="flex items-center gap-2" key={skill}>
@@ -124,7 +125,7 @@ export default function Home() {
         </section>
 
         {/* Technical Experience Section */}
-        <section className="py-20 container mx-auto">
+        {/* <section className="py-20 container mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">
             Technical Experience
           </h2>
@@ -225,10 +226,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Projects Section */}
-        <section id="projects" className="py-20 bg-muted/30">
+        <section id="projects" className="py-20">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">
               My Projects
