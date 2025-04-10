@@ -220,7 +220,7 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="py-20">
-          <div className="container mx-auto">
+          <div className="container w-4/5 mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">
               Get In Touch
             </h2>
