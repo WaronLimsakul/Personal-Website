@@ -54,13 +54,15 @@ export default function Home() {
             </p>
             <div className="flex justify-center gap-4">
               <a href="#projects">
-                <Button>
+                <Button className="cursor-pointer">
                   View My Work
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
               <a href="#contact">
-                <Button variant="outline">Contact Me</Button>
+                <Button variant="outline" className="cursor-pointer">
+                  Contact Me
+                </Button>
               </a>
             </div>
           </div>

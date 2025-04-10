@@ -38,7 +38,7 @@ const projects = [
       "A custom HTTP/1.1 Parser + Server I built in order to learn HTTP protocol",
     codeLink: "https://github.com/WaronLimsakul/basic_http1.1_server",
     tags: ["Go", "HTTP/1.1", "testify"],
-    image: "/HTTP-parser.png",
+    image: "/HTTP-parser2.png",
   },
   {
     title: "RonDB",
@@ -46,7 +46,7 @@ const projects = [
       "A custom SQLite-inpsired database system that I built in C to understand relational database technology",
     codeLink: "https://github.com/WaronLimsakul/RonDB",
     tags: ["C"],
-    image: "/Ron-DB-Spare.jpg",
+    image: "/RonDB.png",
   },
 ];
 
