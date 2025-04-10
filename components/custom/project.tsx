@@ -1,40 +1,43 @@
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
 const projects = [
   {
-    title: "Custom Database Engine",
+    title: "Driven",
     description:
-      "A high-performance key-value store built in Rust with custom B-tree implementation and optimized for SSD storage.",
-    codeLink: "https://github.com/yourusername/custom-db-engine",
-    demoLink: "#", // replace with demo link if available
-    tags: ["Rust", "B-trees", "Storage"],
-    codeSnippet:
-      'fn main() {\n  println!("High-performance database engine");\n}',
+      "A to-do list app I built for personal use with simplicity, speed and security in mind. Driven tried to stay out of your way and let you focus on your tasks.",
+    codeLink: "https://github.com/WaronLimsakul/Driven",
+    demoLink: "https://mfirx7bkff.us-east-1.awsapprunner.com/",
+    tags: ["Go", "Postgres", "HTMX", "Templ", "TailwindCSS"],
+    image: "/Driven2.png",
   },
   {
-    title: "Distributed Message Queue",
+    title: "SimplySaid",
     description:
-      "A fault-tolerant message broker system with support for persistent storage and exactly-once delivery semantics.",
-    codeLink: "https://github.com/yourusername/message-queue",
-    demoLink: "#", // replace with demo link if available
-    tags: ["C++", "Networking", "Concurrency"],
-    codeSnippet:
-      "#include <thread>\nvoid process_queue(MessageQueue& q) {\n  // Implementation\n}",
+      "A user-generated content platform built with Next.js + MongoDB to let students share their knowledge and understanding",
+    codeLink: "https://github.com/WaronLimsakul/SimplySaid",
+    demoLink: "https://simply-said.vercel.app/", // replace with demo link if available
+    tags: ["TypeScript", "Next.js", "MongoDB", "TailwindCSS"],
+    image: "/SimplySaid.png",
   },
   {
-    title: "Custom OS Kernel Module",
+    title: "Waron-E-Commerce",
     description:
-      "A Linux kernel module for optimized I/O operations, implementing a custom scheduling algorithm for disk access.",
-    codeLink: "https://github.com/yourusername/kernel-module",
-    demoLink: "#", // replace with demo link if available
-    tags: ["C", "Linux", "Kernel"],
-    codeSnippet:
-      "module Kernel\n  def self.allocate_memory(size)\n    # Low-level memory allocation\n  end\nend",
+      "E-commerce web application built with PERN stack designed to provide a seamless online shopping experience.",
+    codeLink: "https://github.com/WaronLimsakul/Waron-E-commerce",
+    demoLink: "https://waron-e-commerce-client.waron-limsakul.com/", // replace with demo link if available
+    tags: ["React.js", "Postgres", "Express.js", "StripeAPI"],
+    image: "/Waron-E-C.png",
   },
 ];
 
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20">
-      <div className="container mx-auto">
+      <div className="container w-5/6 mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">My Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
@@ -42,10 +45,13 @@ export default function ProjectsSection() {
               key={project.title}
               className="border rounded-xl overflow-hidden hover:shadow-lg transition-shadow bg-card"
             >
-              <div className="aspect-video bg-zinc-900 flex items-center justify-center">
-                <div className="text-emerald-400 font-mono text-sm p-4 overflow-hidden">
-                  <pre>{project.codeSnippet}</pre>
-                </div>
+              <div className="aspect-video relative">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>

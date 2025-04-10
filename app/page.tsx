@@ -2,13 +2,15 @@ import Link from "next/link";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import ProjectsSection from "@/components/custom/project";
+import MenuButton from "@/components/custom/menu";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-10 border-b bg-background">
         <div className="container flex items-center justify-between h-16 mx-auto">
-          <Link href="/" className="text-xl font-bold">
+          <Link href="/" className="text-xl font-bold mx-2 md:mx-1">
             WL
           </Link>
           <nav className="hidden md:flex items-center gap-6">
@@ -37,30 +39,12 @@ export default function Home() {
               </Button>
             </Link>
           </nav>
-          <Button variant="outline" size="icon" className="md:hidden">
-            <span className="sr-only">Toggle menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          </Button>
+          <MenuButton />
         </div>
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 container mx-auto">
+        <section className="py-20 md:py-32 container w-11/12 mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Hi, I'm <span className="text-primary">Waron Limsakul</span>
@@ -84,14 +68,19 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="py-15 bg-muted/30">
-          <div className="container mx-auto">
+          <div className="container w-4/5 mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
-            <div className="flex justify-center">
-              <div className="max-w-2xl">
-                <h3 className="text-2xl font-semibold mb-4 text-center">
-                  Who I Am
-                </h3>
-                <p className="text-muted-foreground mb-6 text-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="w-full max-w-md mx-auto rounded-xl overflow-hidden bg-muted shadow-md">
+                <img
+                  src="/me.JPG"
+                  alt="Profile"
+                  className="object-cover w-full h-full rounded-xl mx-auto"
+                />
+              </div>
+              <div className="">
+                <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
+                <p className="text-muted-foreground mb-6">
                   I'm a full-stack developer with a growing interest in back-end
                   and low-level systems. I enjoy working on performance
                   optimization, building scalable solutions, and tackling
@@ -99,25 +88,21 @@ export default function Home() {
                   improving my skills to build more efficient and reliable
                   systems.
                 </p>
-                <h3 className="text-2xl font-semibold mb-4 text-center">
-                  My Skills
-                </h3>
-                <div className="flex justify-center">
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      "HTML, CSS, JS, TS",
-                      "Go, basic C",
-                      "API integration, DBMS",
-                      "Database Optimization",
-                      "Basic Networking",
-                      "Linux/Unix Systems",
-                    ].map((skill) => (
-                      <div className="flex items-center gap-2" key={skill}>
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                        <span>{skill}</span>
-                      </div>
-                    ))}
-                  </div>
+                <h3 className="text-2xl font-semibold mb-4">My Skills</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    "HTML, CSS, JS, TS",
+                    "Go, basic C",
+                    "API integration, DBMS",
+                    "Database Optimization",
+                    "Basic Networking",
+                    "Linux/Unix Systems",
+                  ].map((skill) => (
+                    <div className="flex items-center gap-2" key={skill}>
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                      <span>{skill}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
