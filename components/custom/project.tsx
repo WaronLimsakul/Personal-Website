@@ -32,6 +32,22 @@ const projects = [
     tags: ["React.js", "Postgres", "Express.js", "StripeAPI"],
     image: "/Waron-E-C.png",
   },
+  {
+    title: "Custom HTTP/1.1 Parser + Server",
+    description:
+      "A custom HTTP/1.1 Parser + Server I built in order to learn HTTP protocol",
+    codeLink: "https://github.com/WaronLimsakul/basic_http1.1_server",
+    tags: ["Go", "HTTP/1.1", "testify"],
+    image: "/HTTP-parser.png",
+  },
+  {
+    title: "RonDB",
+    description:
+      "A custom SQLite-inpsired database system that I built in C to understand relational database technology",
+    codeLink: "https://github.com/WaronLimsakul/RonDB",
+    tags: ["C"],
+    image: "/Ron-DB-Spare.jpg",
+  },
 ];
 
 export default function ProjectsSection() {
@@ -69,14 +85,28 @@ export default function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <Button variant="outline" size="sm" href={project.codeLink}>
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Button>
-                  <Button size="sm" href={project.demoLink}>
-                    <ArrowRight className="mr-2 h-4 w-4" />
-                    Demo
-                  </Button>
+                  <Link
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm">
+                      <Github className="mr-2 h-4 w-4" />
+                      Code
+                    </Button>
+                  </Link>
+                  {project.demoLink && (
+                    <Link
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button size="sm">
+                        <ArrowRight className="mr-2 h-4 w-4" />
+                        Demo
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
