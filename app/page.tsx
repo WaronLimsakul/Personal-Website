@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-10 border-b bg-background">
         <div className="container flex items-center justify-between h-16 mx-auto">
-          <Link href="/" className="text-xl font-bold mx-2 md:mx-1">
+          <Link href="/" className="text-xl font-bold italic mx-2 md:mx-1">
             WL
           </Link>
           <nav className="hidden md:flex items-center gap-6">
