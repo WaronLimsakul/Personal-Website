@@ -45,7 +45,7 @@ const projects = [
     description:
       "A custom SQLite-inpsired database system that I built in C to understand relational database technology",
     codeLink: "https://github.com/WaronLimsakul/RonDB",
-    tags: ["C"],
+    tags: ["C", "SQLite"],
     image: "/RonDB.png",
   },
 ];
