@@ -1,58 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-const projects = [
-  {
-    title: "Driven",
-    description:
-      "A to-do list app I built for personal use with simplicity, speed and security in mind. Driven tried to stay out of your way and let you focus on your tasks.",
-    codeLink: "https://github.com/WaronLimsakul/Driven",
-    demoLink: "https://mfirx7bkff.us-east-1.awsapprunner.com/",
-    tags: ["Go", "Postgres", "HTMX", "Templ", "TailwindCSS"],
-    image: "/Driven2.png",
-  },
-  {
-    title: "SimplySaid",
-    description:
-      "A user-generated content platform built with Next.js + MongoDB to let students share their knowledge and understanding",
-    codeLink: "https://github.com/WaronLimsakul/SimplySaid",
-    demoLink: "https://simply-said.vercel.app/", // replace with demo link if available
-    tags: ["TypeScript", "Next.js", "MongoDB", "TailwindCSS"],
-    image: "/SimplySaid.png",
-  },
-  {
-    title: "Waron-E-Commerce",
-    description:
-      "E-commerce web application built with PERN stack designed to provide a seamless online shopping experience.",
-    codeLink: "https://github.com/WaronLimsakul/Waron-E-commerce",
-    demoLink: "https://waron-e-commerce-client.waron-limsakul.com/", // replace with demo link if available
-    tags: ["React.js", "Postgres", "Express.js", "StripeAPI"],
-    image: "/Waron-E-C.png",
-  },
-  {
-    title: "Custom HTTP/1.1 Parser + Server",
-    description:
-      "A custom HTTP/1.1 Parser + Server I built in order to learn HTTP protocol",
-    codeLink: "https://github.com/WaronLimsakul/basic_http1.1_server",
-    tags: ["Go", "HTTP/1.1", "testify"],
-    image: "/HTTP-parser2.png",
-  },
-  {
-    title: "RonDB",
-    description:
-      "A custom SQLite-inpsired database system that I built in C to understand relational database technology",
-    codeLink: "https://github.com/WaronLimsakul/RonDB",
-    tags: ["C", "SQLite"],
-    image: "/RonDB.png",
-  },
-];
+export interface Project {
+  title: string;
+  description: string;
+  codeLink: string;
+  demoLink?: string;
+  tags: string[];
+  image: string;
+}
 
-export default function ProjectsSection() {
+// Project section UI
+// To change the project information: go to app/data/projects.ts
+const ProjectsSection: React.FC<{ projects: Project[] }> = ({ projects }) => {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 bg-muted/30">
       <div className="container w-5/6 mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">My Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -115,4 +80,6 @@ export default function ProjectsSection() {
       </div>
     </section>
   );
-}
+};
+
+export default ProjectsSection;

@@ -63,6 +63,7 @@ export default function MenuButton() {
             </Link>
           </SheetClose>
           <SheetClose asChild>
+            {/*to update resume, go to public/ and replace resume.pdf with the new file (same name)*/}
             <Link
               href="/resume.pdf"
               target="_blank"
